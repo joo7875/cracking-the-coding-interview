@@ -32,3 +32,5 @@ function checkPermutation(s1, s2) {
 // }
 
 console.log(checkPermutation('aba', 'bba'));
+
+// TC: O(s1 + s2)

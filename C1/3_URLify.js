@@ -4,3 +4,5 @@ function URLify(s) {
 }
 
 console.log(URLify('Mr John Smith     '));
+
+// TC: O(n)

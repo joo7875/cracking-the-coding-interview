@@ -12,3 +12,5 @@ function stringRotation(s1, s2) {
 }
 
 console.log(stringRotation('waterbottle', 'erbottlewat'));
+
+// TC: O(n)

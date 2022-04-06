@@ -26,3 +26,5 @@ function zeroMatrix(matrix) {
 }
 
 console.log(zeroMatrix(matrix));
+
+// O(n)

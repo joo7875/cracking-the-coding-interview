@@ -11,7 +11,9 @@ function stringCompression(s) {
         }
     }
     
-    return compressed.join('');
+    return compressed.join('').length > s.length ? s : compressed.join('');
 }
 
 console.log(stringCompression('a'));
+
+// O(n)

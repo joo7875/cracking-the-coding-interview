@@ -1,5 +1,6 @@
 function oneWay(s1, s2) {
     if (s1 === s2) return true;
+    if (Math.abs(s1.length - s2.length) > 1) return false;
 
     return s1.length > s2.length ? oneWaySub(s1, s2) : oneWaySub(s2, s1);
 

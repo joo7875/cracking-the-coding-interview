@@ -27,3 +27,5 @@ function rotateMatrix(matrix) {
 }
 
 console.log(rotateMatrix(matrix));
+
+// TC: O(n^2)
