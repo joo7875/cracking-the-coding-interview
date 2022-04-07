@@ -20,3 +20,5 @@ const ll = new LinkedList();
 for (let el of [3, 5, 2, 1, 4]) ll.add(el);
 
 console.log(returnKthToLast(6, ll));
+
+// TC: O(n)

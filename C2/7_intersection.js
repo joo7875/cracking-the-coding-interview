@@ -21,3 +21,5 @@ for (let el of [1, 3, 5, 7, 8]) l1.add(el);
 for (let el of [2, 5, 7, 8]) l2.add(el);
 
 console.log(intersection(l1.head, l2.head));
+
+// TC: O(l1 + l2)

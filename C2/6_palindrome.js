@@ -17,3 +17,5 @@ function palindrome(list) {
 const ll = new LinkedList();
 for (let el of [3, 2, 1, 2, 3]) ll.add(el);
 console.log(palindrome(ll));
+
+// TC: O(n)

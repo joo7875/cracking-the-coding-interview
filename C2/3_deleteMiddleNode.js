@@ -17,3 +17,5 @@ let ll = new LinkedList();
 for (let el of [3, 5, 4, 3, 1, 2]) ll.add(el);
 
 console.log(deleteMiddleNode(3, ll));
+
+// TC: O(n)

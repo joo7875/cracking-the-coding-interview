@@ -27,3 +27,6 @@ const ll = new LinkedList();
 for (let el of [3, 5, 8, 5, 10, 2, 1]) ll.add(el);
 
 console.log(partition(5, ll));
+
+// TC: O(n)
+// SC: O(l1 + l2)

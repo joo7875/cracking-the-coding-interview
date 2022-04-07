@@ -20,3 +20,5 @@ let ll = new LinkedList();
 for (let el of [3, 5, 4, 3, 3, 2]) ll.add(el);
 
 console.log(removeDups(ll));
+
+// TC: O(n)

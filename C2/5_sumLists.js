@@ -24,23 +24,33 @@ function sumLists(l1, l2) {
         node2 = node2.next;
     }
 
-    if (node1) {
-        result.push(node1.element);
-        node1 = node1.next;
-    }
+    node1 ? calculate(node1, carry) : calculate(node2, carry);
 
-    if (node2) {
-        result.push(node2.element);
-        node2 = node2.next;
-    }
+    if (carry) result.push(carry);
 
     return result.reverse().join('');
+
+    function calculate(node, carry) {
+        while (node) {
+            let sum = node.element + carry;
+
+            if (sum > 9) {
+                carry = 1;
+                sum -= 10;
+            }
+
+            result.push(sum);
+            node = node.next;
+        }
+    }
 }
 
 const l1 = new LinkedList();
-for (let el of [7, 1, 6]) l1.add(el);
+for (let el of [9, 9, 9, 9, 9]) l1.add(el);
 
 const l2 = new LinkedList();
-for (let el of [5, 9, 2]) l2.add(el);
+for (let el of [9, 9, 9]) l2.add(el);
 
 console.log(sumLists(l1, l2));
+
+// TC: O(l1 + l2)

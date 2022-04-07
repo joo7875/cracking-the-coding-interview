@@ -7,12 +7,24 @@ function loopDetection(list) {
         slow = slow.next;
         fast = fast.next.next;
 
-        if (slow == fast) return true;
+        if (slow == fast) break;
     }
 
-    return false;
+    if (!fast && !fast.next) return false; // no cycle
+
+    slow = list.head;
+
+    while (slow !== fast) {
+        slow = slow.next;
+        fast = fast.next;
+    }
+
+    return fast;
 }
 
 const ll = new LinkedList();
-for (let el of [1, 2, 3, 4, 5, 3]);
+for (let el of [1, 2, 3, 4, 5, 3]) ll.add(el);
+
 console.log(loopDetection(ll));
+
+// TC: O(n)
