@@ -58,3 +58,7 @@ function sortStack(arr) {
 }
 
 console.log(sortStack(arr.stack));
+
+// TC
+
+// O(nlogn), n = arr.length, log n = binary search

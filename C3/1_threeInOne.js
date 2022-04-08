@@ -69,3 +69,9 @@ console.log(arr.peek(3));
 console.log(arr.isEmpty(3));
 
 console.log(arr);
+
+// TC
+
+// push: O(1)
+// pop: O(1)
+// peek: O(1)

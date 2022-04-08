@@ -2,7 +2,7 @@ class animalShelter {
     constructor() {
         this.dogQueue = [];
         this.catQueue = [];
-        this.allQueue = [];
+        this.allQueue = []; // no need if we use "order" for each dog and cat
     }
 
     enqueue(type, name) {
