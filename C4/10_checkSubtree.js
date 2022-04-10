@@ -1,6 +1,6 @@
 function checkSubtree(root, sub) {
     if (!root) return false;
-    if (recur(root, sub)) return true;
+    if (recur(root, sub)) return true; // for the top node of root
 
     return checkSubtree(root.left, sub) || checkSubtree(root.right, sub);
 

@@ -2,14 +2,13 @@ function validateBST(root) {
 
     return dfs(root, null, null);
     
-    function dfs(root, left, right) {
+    function dfs(root, min, max) {
+
         if (!root) return true;
 
-        // console.log(root.val, left, right);
+        if ((min && root.val <= min) || (max && root.val > max)) return false;
 
-        if ((left && root.val <= left) || (right && root.val >= right)) return false;
-
-        return dfs(root.left, left, root.val) && dfs(root.right, root.val, right);
+        return dfs(root.left, min, root.val) && dfs(root.right, root.val, max);
     }
 }
 
@@ -27,3 +26,6 @@ root_2.right = root_5; // false
 // root_2.right = root_6; // true
 
 console.log(validateBST(root_1));
+
+// TC: O(n)
+// SC: O(logn)

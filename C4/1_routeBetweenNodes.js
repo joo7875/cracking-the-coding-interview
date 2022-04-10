@@ -46,5 +46,8 @@ function routeBetweenNodes(s, e, graph) {
 }
 
 const graph_true = [[1], [0, 2], [3]];
-const graph_false = [[1], [2]];
-console.log(routeBetweenNodes(0, 3, graph_true));
+const graph_false = [[1], [2], [1]];
+console.log(routeBetweenNodes(0, 3, graph_false));
+
+// TC: O(n), n = graph.length
+// SC: at most O(graph.length) by using queue

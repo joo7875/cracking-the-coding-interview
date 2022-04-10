@@ -22,4 +22,6 @@ root.add(3);
 root.add(16);
 root.add(41);
 
-console.log(firstCommonAncestor(2, 8, root));
+console.log(firstCommonAncestor(2, 20, root)); // need to check if p or q is existed in the tree
+
+// TC: O(n)

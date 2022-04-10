@@ -14,7 +14,7 @@ function successor(x, root) {
     dfs(root, result);
 
     let index = result.indexOf(x);
-    if (index + 1 < result.length) return result[index + 1];
+    return index + 1 < result.length ? result[index + 1] : null;
 
     function dfs(root, result) {
         if (root) {
@@ -35,4 +35,4 @@ root.add(3);
 root.add(16);
 root.add(41);
 
-console.log(successor(41, root));
+console.log(successor(16, root)); // in-order traversal

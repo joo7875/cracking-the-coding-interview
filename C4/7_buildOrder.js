@@ -11,7 +11,7 @@ function buildOrder(projects, graph) {
     }
 
     for (let p of projects) {
-        if (!order[p]) queue.push(p);
+        if (!order[p]) queue.push(p); // node that doesn't have incoming element
     }
 
     while (queue.length) {
@@ -26,13 +26,13 @@ function buildOrder(projects, graph) {
         if (!seen.has(node)) seen.add(node);
     }
 
-    return seen.size ? [...seen] : null;
+    return seen.size === projects.length ? [...seen] : null;
 }
 
-const projects = ['a', 'b', 'c', 'd', 'e', 'f'];
-const dependancies = [['a','d'], ['f','b'], ['b','d'], ['f','a'], ['d','c']];
+// const projects = ['a', 'b', 'c', 'd', 'e', 'f'];
+// const dependancies = [['a','d'], ['f','b'], ['b','d'], ['f','a'], ['d','c']];
 
-// const projects = ['a', 'b', 'c'];
-// const dependancies = [['a','b'], ['a','c'], ['b','a']];
+const projects = ['a', 'b', 'c'];
+const dependancies = [['a','b'], ['a','c'], ['b','a']];
 
 console.log(buildOrder(projects, dependancies));

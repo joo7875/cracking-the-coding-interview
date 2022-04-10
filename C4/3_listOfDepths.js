@@ -34,4 +34,6 @@ root.add(41);
 //    2   8  16  41
 //     3
 
-console.log(listOfDepths(root));
+console.log(listOfDepths(root)); // 10 -> 5 -> 20 -> 2 -> 8 -> 16 -> 41 -> 3
+
+// TC: O(n)

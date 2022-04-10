@@ -14,11 +14,8 @@ function checkBalanced(root) {
 
         if (Math.abs(left - right) > 1) return -1;
 
-        // console.log(root.val, left, right);
-
         return Math.max(left, right) + 1;
     }
-
 }
 
 let root_true = new TreeNode(10);
@@ -38,4 +35,7 @@ root_false.add(3);
 root_false.add(2);
 root_false.add(1);
 
-console.log(checkBalanced(root_false));
+console.log(checkBalanced(root_true));
+
+// TC: O(n)
+// SC: O(h), h = height of the tree
