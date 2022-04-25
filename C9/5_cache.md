@@ -54,4 +54,6 @@ Expand to many machines
 Updating results when contents change
 
 # Step 4
-Further enhancement
+Further enhancement - automatic time out
+- implement timeout based on topic or based on URLs
+- time out value based on how frequently the page has been updated in the past
