@@ -12,7 +12,7 @@
 - Algorithm:
     - Find A and B's user_id
     - A and B from both sides, expanding out by degree
-    - Removing duplicates (BFS, to minimise the number of degrees searched)
+    - Removing duplicates (BFS, to minimize the number of degrees searched)
     - bidirectional BFS
 
 3. Identify and Address Problems (at scale)
@@ -22,7 +22,7 @@
 - Too many users
 - Separate graph search engine from profile info database/server
 - In graph search engine, organize graphs in sorted order(e.g. 1 server stores 2 million nodes in alphabetical order, and engine can call the database storing nodes when it needs)
-- It would be troublesome to re-index the databases if more users starting with 'A' appy
+- It would be troublesome to re-index the databases if more users starting with 'A'
 - Could index by user_id numerical order (with half a billion users that's 10-digit number) => Shard database in numerical order **
 
 4. Points of Failure

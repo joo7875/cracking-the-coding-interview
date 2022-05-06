@@ -17,7 +17,7 @@
 3. Identify and Address Problems
 - Many queries at the same time by multiple machines
 - Queue for cache service
-- Need to pink LRU cache service for each search
+- Need to ping LRU cache service for each search
 - Address latency by having CDNs
 - Need to update LRU cache for each re-indexing
 - Trade-off for not having run processSearch

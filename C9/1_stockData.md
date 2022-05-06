@@ -7,7 +7,7 @@
 4) data will be -stock, -date, -open, -close, -high, -low
 5) stores historical data
 6) returns JSON
-7) clients  in difference geographical locations
+7) clients in difference geographical locations
 
 - Assumption:
 1) no real-time need, used for research and records
