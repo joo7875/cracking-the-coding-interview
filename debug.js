@@ -74,4 +74,97 @@ function permutations(letters) {
     }
 };
 
-console.log(subsets([1, 2, 3]));
+// console.log(subsets([1, 2, 3]));
+
+function questionmark(s, target) {
+
+    if (!s || s.length === 0) return false;
+
+    s = s.split('???');
+    let sum = 0;
+
+    for (let str of s) {
+        for (let i = 0; i < str.length; i++) {
+            if (!isNaN(str[i])) sum += Number(str[i]);
+        }
+    }
+
+    return sum === target;
+}
+
+// console.log(questionmark('arrb6???oiuqwer???hhh8?', 10));
+
+
+ var numEnclaves = function(grid) {
+    let m = grid.length;
+    let n = grid[0].length;
+    
+    const dir = [[0,1],[1,0],[-1,0],[0,-1]];
+    
+    let result = 0;
+    
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] === 1) {
+                let op = dfs(i, j, 0);
+                if (op !== -Infinity) result += op;
+            }
+        }
+    }
+    
+    return result;
+        
+    function dfs(i, j, count) {
+        if (i < 0 || j < 0 || i >= m || j >= n || grid[i][j] === 0) return count;
+        if ((i === 0 || j === 0 || i === m - 1 || j === n - 1) && grid[i][j] === 1) count = -Infinity;
+        
+        count++;
+        grid[i][j] = 0;
+        
+        for (let [dx, dy] of dir) {
+            count = dfs(i + dx, j + dy, count);
+        }
+        
+        return count;
+    }
+};
+
+const grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]];
+// console.log(numEnclaves(grid));
+
+
+// Write a function "compress" that, given an alphabetic string, returns a compressed version of the string that is able to be decompressed back into the original string.
+
+// compress(DOOR)
+// output: DO2R
+
+function compress(input) {
+
+    if (!input || input.length === 0) return -1;
+
+    let result = '';
+    let pointer = 0;
+    let count = 1;
+
+    for (let i = 1; i < input.length; i++) {
+
+        if (input[pointer] !== input[i]) {
+            result += input[pointer];
+            
+            if (count !== 1) {
+                result += count;
+                count = 1;
+            }
+            pointer = i;
+        } 
+        else count++;
+    }
+
+    result += input[pointer];
+    
+    if (pointer < input.length - 1) result += (input.length - pointer);
+
+    return result;
+}
+
+console.log(compress('DDOOORRRR'));

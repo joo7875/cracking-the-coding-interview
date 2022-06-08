@@ -1,7 +1,8 @@
 class Bank {
-    constructor(account) {
-        this.account = account;
+    constructor(account_id) {
+        this.account_id = account_id;
         this.balance = 0;
+        this.is_sensitive = false;
     }
 
     deposit(amount) {
